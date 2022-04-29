@@ -7,12 +7,31 @@
 // would need to evolve (rare candies increase your level by one).
 // Finally, create a fourth variable named totalCandies that sums
 // all the rare candies you would need.
-
+let rareOne = "";
+let rareTwo = "";
+let rareThree = "";
 //Conditionals And Functions
 //You have a charmander in your party. Charmander can
 // only battle if the temperature is above 0 degrees celcius. Create one function
 //  that converts a Fahrenheit value to Celcius and another fuction that tells you
-//  wheither or not charmander can battle
+//  wheither or not charmander can battle To convert temperatures in degrees Celsius to
+// Fahrenheit, multiply by 1.8 (or 9/5) and add 32.
+// Fahrenheit to Celsius, subtract 32 and multiply by . 5556 (or 5/9).
+
+function isCelcius() {
+  let feh = 5;
+  let cel = ((feh - 32) * 5) / 9;
+  console.log(cel);
+  return cel;
+}
+function canBattle() {
+  if (isCelcius() > 0) {
+    console.log("battle");
+  } else {
+    console.log("run");
+  }
+}
+console.log(canBattle());
 
 //Loops
 //You have joined an undeground pokemon leauge. In this league, trainers can use
