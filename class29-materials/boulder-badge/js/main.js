@@ -7,7 +7,7 @@
 // would need to evolve (rare candies increase your level by one).
 // Finally, create a fourth variable named totalCandies that sums
 // all the rare candies you would need.
-let rareOne = "";
+let bulba = 16 - 5;
 let rareTwo = "";
 let rareThree = "";
 //Conditionals And Functions
@@ -19,9 +19,9 @@ let rareThree = "";
 // Fahrenheit to Celsius, subtract 32 and multiply by . 5556 (or 5/9).
 
 function isCelcius() {
-  let feh = 5;
+  let feh = Math.floor(Math.random() * 50);
   let cel = ((feh - 32) * 5) / 9;
-  console.log(cel);
+  console.log(feh);
   return cel;
 }
 function canBattle() {
