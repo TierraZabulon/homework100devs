@@ -1,16 +1,15 @@
 //Arrays
 //Your pokemon party order which is a list of pokemon has been leaked to Misty.
 // Please create a function that reverses your list and prints it to the console.
-function arrays() {
-  let array = ["bubla", "charmander", "pickachu", "squirtal"];
-  return array.reverse();
+function arrays(party) {
+  console.log(party.reverse());
 }
 console.log(arrays());
 //Given two integer arrays a, b, both of length >= 1, create a program that returns true
 //  if the sum of the squares of each element in a is strictly greater than the sum of
 //  the cubes of each element in b.
-let arrayA = [5, 10, 15];
-let arrayB = [2, 4];
+
+//reduce
 //Return a new array consisting of elements which are multiple of their
 // own index in input array (length > 1).
 // Some cases:
