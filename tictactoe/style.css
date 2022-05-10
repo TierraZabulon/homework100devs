@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+.container {
+  border: 2px solid black;
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 10rem;
+  padding-top: 5rem;
+}
+
+.square {
+  border: 2px solid red;
+  height: 25vh;
+  width: 15vw;
+  justify-content: center;
+}
