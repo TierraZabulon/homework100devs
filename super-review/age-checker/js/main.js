@@ -25,7 +25,7 @@ if (age < 16) {
 //--- Harder
 //On click of the h1
 document.querySelector("h1").addEventListener("click", age);
-const para = document.querySelector("p");
+const p = document.querySelector("p");
 function age() {
   let age = document.querySelector("input").value;
   if (age < 16) {
