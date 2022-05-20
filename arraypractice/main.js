@@ -70,7 +70,11 @@ console.log(totalMass);
 //2. Get array of all heights
 //3. Get array of objects with just name and height properties
 //4. Get array of all first names
-
+let heightOfChar = characters.map((characters) => {
+  return characters.height;
+});
+let totalHeight = heightOfChar.reduce((a, b) => a + b);
+console.log(totalHeight);
 //***REDUCE***
 //1. Get total mass of all characters
 //2. Get total height of all characters
