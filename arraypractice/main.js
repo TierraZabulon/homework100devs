@@ -47,9 +47,9 @@ let firstName = characters.map((characters) => {
   return characters.name;
 });
 
-console.log(firstName);
-console.log(charHeight);
-console.log(usersNameHeight);
+// console.log(firstName);
+// console.log(charHeight);
+// console.log(usersNameHeight);
 
 // function arr() {
 //   let people = ["greg", "mary", "devon", "james"];
@@ -63,22 +63,27 @@ let mass = characters.map((characters) => {
   return characters.mass;
 });
 
-let totalMass = mass.reduce((a, b) => a + b);
-console.log(totalMass);
+// let totalMass = mass.reduce((a, b) => a + b);
+// console.log(totalMass);
 //***MAP***
 //1. Get array of all names
 //2. Get array of all heights
 //3. Get array of objects with just name and height properties
 //4. Get array of all first names
-let heightOfChar = characters.map((characters) => {
-  return characters.height;
-});
-let totalHeight = heightOfChar.reduce((a, b) => a + b);
-console.log(totalHeight);
+// let heightOfChar = characters.map((characters) => {
+//   return characters.height;
+// });
+// let totalHeight = heightOfChar.reduce((a, b) => a + b);
+// console.log(totalHeight);
 //***REDUCE***
 //1. Get total mass of all characters
 //2. Get total height of all characters
 //3. Get total number of characters by eye color
+// let charEyeColor = characters.map((characters) => {
+//   return characters;
+// });
+// let totalEyeColor = charEyeColor.reduce((a, b) => a + b);
+// console.log(totalEyeColor);
 //4. Get total number of characters in all the character names
 
 //***FILTER***
@@ -104,3 +109,42 @@ console.log(totalHeight);
 //2. Is there at least one character with blue eyes?
 //3. Is there at least one character taller than 210?
 //4. Is there at least one character that has mass less than 50?
+// function excercise
+
+//this function takes in two parameters and returns the difference
+
+function difference(a, b) {
+  return a - b;
+}
+
+console.log(difference(10, 5));
+
+function product(a, b) {
+  return a * b;
+}
+console.log(product(2, 2));
+
+function daysOfWeek(num) {
+  let day = Math.floor(Math.random() * 7);
+  if (day === 1) {
+    return "Sunday";
+  } else if (day === 2) {
+    return "Monday";
+  } else if (day === 3) {
+    return "Tuesday";
+  } else if (day === 4) {
+    return "Wednesday";
+  } else if (day === 5) {
+    return "Thursday";
+  } else if (day === 6) {
+    return "Friday";
+  } else if (day === 7) {
+    return "Saturday";
+  } else {
+    return "undefined";
+  }
+}
+
+//forgot to use num
+console.log(daysOfWeek());
+//this function takes in one parameter (an array) and returns the last value in the array. It should return undefined if the array is empty.
