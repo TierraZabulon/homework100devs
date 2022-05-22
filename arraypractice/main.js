@@ -148,3 +148,15 @@ function daysOfWeek(num) {
 //forgot to use num
 console.log(daysOfWeek());
 //this function takes in one parameter (an array) and returns the last value in the array. It should return undefined if the array is empty.
+function lastValue(arr) {
+  arr = [1, 2, 3, 4];
+  if (arr.length === 0) {
+    return "undefined";
+  } else {
+    return arr[arr.length - 1];
+  }
+}
+console.log(lastValue());
+//this function takes in two parameters (both numbers). If the first is greater than the second, this function returns "First is greater". If the second number is greater than the first, the function returns "Second is greater". Otherwise the function returns "Numbers are equal"
+
+function numberCompare(num1, num2) {}
