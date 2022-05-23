@@ -159,4 +159,15 @@ function lastValue(arr) {
 console.log(lastValue());
 //this function takes in two parameters (both numbers). If the first is greater than the second, this function returns "First is greater". If the second number is greater than the first, the function returns "Second is greater". Otherwise the function returns "Numbers are equal"
 
-function numberCompare(num1, num2) {}
+function numberCompare(num1, num2) {
+  if (num1 > num2) {
+    return "First is greater";
+  } else if (num1 < num2) {
+    return "second is greater";
+  } else if (num1 === num2) {
+    return "both are equal";
+  }
+}
+console.log(numberCompare(74, 4));
+
+//this function takes in two parameters (two strings). The first parameter should be a word and the second should be a letter. The function returns the number of times that letter appears in the word. The function should be case insensitive (does not matter if the input is lowercase or uppercase). If the letter is not found in the word, the function should return 0.
