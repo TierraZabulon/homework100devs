@@ -17,43 +17,29 @@ const server = http.createServer((req, res) => {
   console.log(page);
 
   if (page == "/") {
-    fs.readFile("index.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      res.end();
-    });
+    readWrite("index.html", "text/html");
   } else if (page == "/otherpage") {
-    fs.readFile("otherpage.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      res.end();
-    });
+    readWrite("otherpage.html", "text/html");
   } else if (page == "/otherotherpage") {
-    fs.readFile("otherotherpage.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      res.end();
-    });
+    readWrite("otherotherpage.html", "text/html");
   } else if (page == "/api") {
     if ("student" in params) {
+      let personName = "unknown";
+      let personOccupation = "unknown";
+      let personStatus = "unknown";
       if (params["student"] == "leon") {
-        res.writeHead(200, { "Content-Type": "application/json" });
-        const objToJson = {
-          name: "leon",
-          status: "Boss Man",
-          currentOccupation: "Baller",
-        };
-        res.end(JSON.stringify(objToJson));
-      } //student = leon
-      else if (params["student"] != "leon") {
-        res.writeHead(200, { "Content-Type": "application/json" });
-        const objToJson = {
-          name: "unknown",
-          status: "unknown",
-          currentOccupation: "unknown",
-        };
-        res.end(JSON.stringify(objToJson));
-      } //student != leon
+        personName = "leon";
+        personOccupation = "Boss man";
+        personStatus = "Baller";
+      }
+      res.writeHead(200, { "Content-Type": "application/json" });
+      const objToJson = {
+        name: personName,
+        status: personStatus,
+        currentOccupation: personOccupation,
+      };
+
+      res.end(JSON.stringify(objToJson));
     } //student if
   } //else if
   else if (page == "/css/style.css") {
@@ -62,11 +48,7 @@ const server = http.createServer((req, res) => {
       res.end();
     });
   } else if (page == "/js/main.js") {
-    fs.readFile("js/main.js", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/javascript" });
-      res.write(data);
-      res.end();
-    });
+    readWrite("js/main.js", "text/javascript");
   } else {
     figlet("404!!", function (err, data) {
       if (err) {
@@ -81,3 +63,13 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(8000);
+//student = leon
+//  } else if (params["student"] != "leon") {
+//     res.writeHead(200, { "Content-Type": "application/json" });
+//     const objToJson = {
+//       name: "unknown",
+//       status: "unknown",
+//       currentOccupation: "unknown",
+//     };
+//     res.end(JSON.stringify(objToJson));
+//   } //student != leon
