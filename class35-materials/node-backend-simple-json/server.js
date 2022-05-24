@@ -23,24 +23,16 @@ const server = http.createServer((req, res) => {
   } else if (page == "/otherotherpage") {
     readWrite("otherotherpage.html", "text/html");
   } else if (page == "/api") {
-    if ("student" in params) {
-      let personName = "unknown";
-      let personOccupation = "unknown";
-      let personStatus = "unknown";
-      if (params["student"] == "leon") {
-        personName = "leon";
-        personOccupation = "Boss man";
-        personStatus = "Baller";
-      }
-      res.writeHead(200, { "Content-Type": "application/json" });
-      const objToJson = {
-        name: personName,
-        status: personStatus,
-        currentOccupation: personOccupation,
-      };
+    if (params["student"] == "flip") {
+      flipResult = Math.random() <= 0.5 ? "heads" : "tails";
+    }
+    res.writeHead(200, { "Content-Type": "application/json" });
+    const objToJson = {
+      name: flipResult,
+    };
 
-      res.end(JSON.stringify(objToJson));
-    } //student if
+    res.end(JSON.stringify(objToJson));
+    //student if
   } //else if
   else if (page == "/css/style.css") {
     fs.readFile("css/style.css", function (err, data) {
