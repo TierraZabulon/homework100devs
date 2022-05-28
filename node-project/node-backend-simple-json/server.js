@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
   } else if (page == "/otherotherpage") {
     readWrite("otherotherpage.html", "text/html");
   } else if (page == "/api") {
-    if (params["student"] == "quote") {
+    if (params["student"] == "day") {
       let choices = Math.random() * 100;
       flipResult =
         choices >= 70
